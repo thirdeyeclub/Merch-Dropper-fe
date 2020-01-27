@@ -10,7 +10,7 @@ const initialState = {
     error: ''
 };
 
-export const reducer = (state = initialState, action) => {
+export const RegisterReducer = (state = initialState, action) => {
     switch (action.type) {
         case REGISTER_START: 
             return {
@@ -31,7 +31,8 @@ export const reducer = (state = initialState, action) => {
                 isFetching: false,
                 error: action.payload
             }
-
+        default:
+            return state;
     }
 };
 
