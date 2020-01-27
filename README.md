@@ -1,16 +1,14 @@
-🚫 Note: All lines that start with 🚫 are instructions and should be deleted before this is posted to your portfolio. This is intended to be a guideline, feel free to add your own flare to it.
+<!-- 🚫 Note: All lines that start with 🚫 are instructions and should be deleted before this is posted to your portfolio. This is intended to be a guideline, feel free to add your own flare to it.
 
 🚫 The numbers 1️⃣ through 5️⃣ next to each item represent the week that part of the docs needs to be comepleted by.  Make sure to delete the numbers by the end of Labs.
 
-🚫 Each student has a required minimum number of meaningful PRs each week per the rubric. Contributing to docs does NOT count as a PR to meet your weekly requirements.
+🚫 Each student has a required minimum number of meaningful PRs each week per the rubric. Contributing to docs does NOT count as a PR to meet your weekly requirements. -->
 
 # Merch Dropper
 
-1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
+1️⃣ Deployed URL comming soon.
 
 ## 4️⃣ Contributors
-
-🚫Add contributor info below, make sure add images and edit the social links for each member. Add to or delete these place-holders as needed
 
 |                                       [Jennie Van](https://github.com/yennilee)                                        |                                       [Daniel Ajadi](https://github.com/theolamide)                                        |                                       [Jerris Manning](https://github.com/jeris-manning)                                        |                                       [Marcos Lira](https://github.com/)                                        |                                       [Tristan Boudreau](https://github.com/tboudreau614)                                        |                                       [Wes Jonke](https://github.com/Wjonke)                                        |
 | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
@@ -21,7 +19,7 @@
 <br>
 <br>
 
-🚫 4️⃣ Optional examples of using images with links for your tech stack, make sure to change these to fit your project
+<!-- 🚫 4️⃣ Optional examples of using images with links for your tech stack, make sure to change these to fit your project
 
 ![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
 ![React](https://img.shields.io/badge/react-v16.7.0--alpha.2-blue.svg)
@@ -29,22 +27,19 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b5c4db1c-b10d-42c3-b157-3746edd9e81d/deploy-status)](netlify link goes in these parenthesis)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-🚫 more info on using badges [here](https://github.com/badges/shields)
+🚫 more info on using badges [here](https://github.com/badges/shields) -->
 
 ## Project Overview
 
-1️⃣ [Trello Board](🚫add link to trello board here)
+[Trello Board](https://trello.com/b/3J8Q4Zry/merch-dropper)
 
-1️⃣ [Product Canvas](🚫add link to product canvas here)
+[Product Canvas](https://www.notion.so/Vision-Problem-Objectives-e21883c7bdb943a681ed3dd03e83624e)
 
-1️⃣ [UX Design files](🚫add link to design files here) - 🚫 delete if not applicable
+1️⃣ [UX Design files](🚫add link to design files here)
 
 🚫 Replace lorem ipsum with a description of your project
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+Merch Dropper aims to solve, for creators and enterpreneurs, the hassle that comes with creating customized merchindize at a small scale. We aim to take the work away from you so you focus on what you do best, to create. We focus on recieveing the orders, shipping, payments collection, and all the nitty gritty for a fee. We are a plug and play one stop shop.
 
 ### 4️⃣ Key Features
 
@@ -60,36 +55,41 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
 #### ReactJS
 
-🚫 Why did you choose this framework?
+We chose this framework because:
+-    Most familiarity with React as a FE framework
+-    Single Page Application
+-    It is very responsive
 
--    point one
--    point two
--    point three
--    point four
+#### Reactsrtap
+#### Styled Components
+#### Redux 
 
-🚫List the rest of the front end features and libraries in the same format as the framework above.
+#### Front end deployed to `Coming Soon`
 
-#### Front end deployed to `🚫insert service here`
-
-#### [Back end](🚫link to back end repo here) built using:
+#### [Back end](https://github.com/Lambda-School-Labs/Merch-Dropper-be) built using:
 
 #### NodeJS
 
--    point one
--    point two
--    point three
+-    Having a true relational database will work very well with the data we expect to be using. 
+-    Everyone on the team has a working knowledge of NodeJS and that'll make it easier to debug if we ever run into any issues.
 
-🚫 List the rest of the back end end features and libraries in the same format as the framework above
+#### knex
+#### knex-cleaner
+#### postgreSQL
+#### express
+#### helmet
+#### jsonwebtoken
+#### bycryptJS
 
 # APIs
 
-## 2️⃣ Authentication API here
+## 2️⃣ Authentication API here (auth0)
 
 🚫Replace text below with a description of the API
 
 Water's like me. It's laaazy ... Boy, it always looks for the easiest way to do things A little happy sunlight shining through there. Let all these little things happen. Don't fight them. Learn to use them. Even the worst thing we can do here is good.
 
-## 2️⃣ Payment API here
+## 2️⃣ Payment API here (Stripe and PayPal)
 
 🚫Replace text below with a description of the API
 
@@ -194,4 +194,4 @@ These contribution guidelines have been adapted from [this good-Contributing.md-
 
 ## Documentation
 
-See [Backend Documentation](🚫_link to your backend readme here_) for details on the backend of our project.
+See [Backend Documentation](https://github.com/Lambda-School-Labs/Merch-Dropper-be) for details on the backend of our project.
