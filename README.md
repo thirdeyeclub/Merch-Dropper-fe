@@ -35,9 +35,7 @@
 
 [Product Canvas](https://www.notion.so/Vision-Problem-Objectives-e21883c7bdb943a681ed3dd03e83624e)
 
-1️⃣ [UX Design files](🚫add link to design files here)
-
-🚫 Replace lorem ipsum with a description of your project
+[UX Design files](https://www.figma.com/file/5lLWs0crM1wyPltJmAqj0n/Merch-Dropper?node-id=122%3A2)
 
 Merch Dropper aims to solve, for creators and enterpreneurs, the hassle that comes with creating customized merchindize at a small scale. We aim to take the work away from you so you focus on what you do best, to create. We focus on recieveing the orders, shipping, payments collection, and all the nitty gritty for a fee. We are a plug and play one stop shop.
 
