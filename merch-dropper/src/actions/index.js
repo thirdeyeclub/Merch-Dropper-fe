@@ -1,5 +1,6 @@
 import { REGISTER_START, REGISTER_SUCCESS, REGISTER_FAILURE } from './RegisterActions';
 import { LOGIN_START, LOGIN_SUCCESS, LOGIN_FAILURE } from './LoginActions';
+import { ADD_PRODUCT, REMOVE_PRODUCT } from './CartActions';
 
 
 export {
@@ -8,5 +9,7 @@ export {
     REGISTER_FAILURE,
     LOGIN_START,
     LOGIN_SUCCESS,
-    LOGIN_FAILURE
+    LOGIN_FAILURE,
+    ADD_PRODUCT,
+    REMOVE_PRODUCT
 };
