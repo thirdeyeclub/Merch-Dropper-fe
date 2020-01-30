@@ -9,6 +9,8 @@ import './index.css';
 import App from './App';
 import rootReducer from './reducers';
 import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
