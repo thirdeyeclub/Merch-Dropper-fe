@@ -3,12 +3,13 @@ import initialState from './initialState';
 
 
 const CartReducer = (state = initialState, action) => {
+    console.log('state in cartreducer', state)
 
     switch (action.type) {
         case ADD_CART_PRODUCT: 
             return {
                 ...state, 
-                cart: state.cart.concat(action.payload),
+                cart: state.cart.push(action.payload),
                 error: ''
             }
         case REMOVE_CART_PRODUCT:

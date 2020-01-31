@@ -2,15 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const Product = ({ product, addToCart }) => {
+const Product = (props) => {
+    // console.log(props)
 
     return (
         <div>
             <Div className='product-container'>
-                <h3>{product.title}</h3>
-                <Img src={product.image} />
-                <h3>${product.price}</h3>
-                <button onClick={() => addToCart(product)}>Add to Cart</button>
+                <h3>{props.product.title}</h3>
+                <Img src={props.product.image} />
+                <h3>${props.product.price}</h3>
+                <button onClick={() => props.addToCart(props.product)}>Add to Cart</button>
             </Div>
         </div>
     )

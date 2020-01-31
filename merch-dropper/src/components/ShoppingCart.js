@@ -13,11 +13,11 @@ const ShoppingCart = (props) => {
     )
 };
 
+// WHY IS IT RETURNING A NUMBER 
 const mapStateToProps = (state, props) => {
-    console.log('state from shoppingcart', state)
+    // console.log('state from shoppingcart', state.CartReducer)
     return {
-        cart: state.cart,
-        error: state.error
+        cart: state.CartReducer
     }
 }
 

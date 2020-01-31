@@ -3,8 +3,8 @@ import React,{ useState } from 'react';
 import NavBar from './components/NavBar';
 import './App.css';
 import Products from './components/Products';
-import data from './dummyData';
 import ShoppingCart from './components/ShoppingCart';
+import data from './dummyData';
 
 function App() {
   const [products] = useState(data)
@@ -14,7 +14,7 @@ function App() {
       <h1>Labs 20 Merch Dropper</h1>
       <NavBar />
       <ShoppingCart />
-      <Products props={products} />
+      <Products product={products}/>
     </div>
   );
 }

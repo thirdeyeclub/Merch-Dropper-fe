@@ -3,12 +3,12 @@ import Product from './Product';
 import { connect } from 'react-redux';
 import { addToCart } from '../actions';
 
-const Products = (data) => {
-    // console.log(data)
+const Products = ({ product, addToCart }) => {
+    // console.log(product)
     return (
         <div>
-            {data.props.products.map(product => (
-                <Product key={product.id} product={product} props={data} addToCart={addToCart} />
+            {product.products.map(product => (
+                <Product key={product.id} product={product} addToCart={addToCart} />
             ))}
         </div>
     )
