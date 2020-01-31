@@ -9,12 +9,7 @@ import {
     REMOVE_PRODUCT_SUCCESS,
     REMOVE_PRODUCT_FAIL
  } from '../actions';
-
- const initialState = {
-     error: '',
-     isFetching: false,
-     products: []
- }
+import initialState from './initialState';
 
  const ProductReducer = (state = initialState, action) =>{
     switch (action.type) {

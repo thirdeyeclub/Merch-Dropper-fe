@@ -1,43 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
-import { connect } from 'react-redux';
-import { addToCart } from '../actions';
 
-const Product = props => {
-    console.log(props)
 
-    const handleSubmit = event => {
-        event.preventDefault();
-        alert('clicked')
-        props.addToCart(props.product)
-    };
+const Product = ({ product, addToCart }) => {
 
     return (
         <div>
             <Div className='product-container'>
-                <h3>{props.product.title}</h3>
-                <Img src={props.product.image} />
-                <h3>${props.product.price}</h3>
-                <button onClick={handleSubmit}>Add to Cart</button>
+                <h3>{product.title}</h3>
+                <Img src={product.image} />
+                <h3>${product.price}</h3>
+                <button onClick={() => addToCart(product)}>Add to Cart</button>
             </Div>
         </div>
     )
 };
 
 
-function mapStateToProps(state, props) {
-    return {
-        cart: state.products
-    }
-};
-
-function mapDispatchToProps(dispatch) {
-    return {
-        addToCart: product => dispatch(addToCart(product))
-    }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Product);
+export default Product;
 
 
 const Div = styled.div`

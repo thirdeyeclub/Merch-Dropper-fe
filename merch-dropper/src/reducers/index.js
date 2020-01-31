@@ -5,9 +5,11 @@ import LoginReducer from './LoginReducers';
 import CartReducer from './CartReducers';
 import ProductReducer from './ProductReducers';
 
-export default combineReducers({
+const rootReducer = combineReducers({
     RegisterReducer,
     LoginReducer,
     CartReducer,
     ProductReducer
 });
+
+export default rootReducer;

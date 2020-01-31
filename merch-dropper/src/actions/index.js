@@ -94,9 +94,10 @@ export const removeProduct = productId => dispatch => {
 // Shopping Cart Actions - add item to shopping cart
 export const ADD_CART_PRODUCT = 'ADD_CART_PRODUCT';
 export const addToCart = product => {
+    console.log('action called', product)
     return { 
         type: ADD_CART_PRODUCT, 
-        payload: product 
+        payload: product
     }
 };
 
