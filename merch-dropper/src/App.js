@@ -2,12 +2,13 @@ import React from 'react';
 
 import NavBar from './components/NavBar';
 import './App.css';
+import Homepage from './components/Homepage';
 
 function App() {
   return (
     <div className="App">
-      <h1>Labs 20 Merch Dropper</h1>
       <NavBar />
+      <Homepage />
     </div>
   );
 }
