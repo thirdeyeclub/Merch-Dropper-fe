@@ -107,6 +107,6 @@ export const removeFromCart = product => {
     console.log('removeaction called', product)
     return {
         type: REMOVE_CART_PRODUCT,
-        payload: product
+        payload: product.id
     }
 };
