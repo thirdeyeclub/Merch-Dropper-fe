@@ -2,8 +2,14 @@ import { combineReducers } from 'redux';
 
 import RegisterReducer from './RegisterReducers';
 import LoginReducer from './LoginReducers';
+import CartReducer from './CartReducers';
+import ProductReducer from './ProductReducers';
 
-export default combineReducers({
+const rootReducer = combineReducers({
     RegisterReducer,
-    LoginReducer
+    LoginReducer,
+    CartReducer,
+    ProductReducer
 });
+
+export default rootReducer;
