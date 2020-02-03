@@ -15,7 +15,6 @@ const ShoppingCart = (props) => {
     )
 };
 
-// WHY IS IT RETURNING A NUMBER 
 const mapStateToProps = (state, props) => {
     console.log('state from shoppingcart', state.CartReducer.cart)
     return {
