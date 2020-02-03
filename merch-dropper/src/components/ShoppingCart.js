@@ -5,11 +5,11 @@ import { removeFromCart } from '../actions';
 import styled from 'styled-components';
 
 const ShoppingCart = (props) => {
-    // console.log('shoppingcart props', props.cart.cart)
+    console.log('cart props', props)
     return (
         <Div>
-            {props.cart.cart.map(product => (
-                <ShoppingCartItem key={product.id} product={product}removeFromCart={removeFromCart} />
+            {props.cart.map(product => (
+                <ShoppingCartItem key={product.id} product={product}removeFromCart={props.removeFromCart} />
             ))}
         </Div>
     )
@@ -17,9 +17,9 @@ const ShoppingCart = (props) => {
 
 // WHY IS IT RETURNING A NUMBER 
 const mapStateToProps = (state, props) => {
-    // console.log('state from shoppingcart', state.CartReducer)
+    console.log('state from shoppingcart', state.CartReducer.cart)
     return {
-        cart: state.CartReducer
+        cart: state.CartReducer.cart
     }
 }
 
