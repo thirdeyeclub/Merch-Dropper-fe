@@ -5,10 +5,12 @@ import { removeFromCart } from '../actions';
 import styled from 'styled-components';
 
 const ShoppingCart = (props) => {
-
+    // console.log('shoppingcart props', props.cart.cart)
     return (
         <Div>
-            <ShoppingCartItem />
+            {props.cart.cart.map(product => (
+                <ShoppingCartItem key={product.id} product={product}removeFromCart={removeFromCart} />
+            ))}
         </Div>
     )
 };

@@ -3,8 +3,8 @@ import initialState from './initialState';
 
 
 const CartReducer = (state = initialState, action) => {
-    console.log('state in cartreducer', state.cart)
     let cart = state.cart;
+    console.log('current cart state', cart)
 
     switch (action.type) {
         case ADD_CART_PRODUCT: 
@@ -17,7 +17,7 @@ const CartReducer = (state = initialState, action) => {
         case REMOVE_CART_PRODUCT:
             return {
                 ...state,
-                cart: state.cart.filter(item => item.id !== action.product.id)
+                cart: cart.filter(item => item.id !== action.payload)
             }
         default: 
             return state;
@@ -25,5 +25,3 @@ const CartReducer = (state = initialState, action) => {
 };
 
 export default CartReducer;
-
-// cart: state.cart.push(action.payload),
