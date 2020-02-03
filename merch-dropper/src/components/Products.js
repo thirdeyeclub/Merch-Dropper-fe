@@ -15,7 +15,7 @@ const Products = ({ product, addToCart }) => {
 }
 
 const mapStateToProps = state => {
-    console.log(state.CartReducer.cart)
+    console.log('state in products', state.CartReducer.cart)
     return {
         cart: state.CartReducer.cart
     } 

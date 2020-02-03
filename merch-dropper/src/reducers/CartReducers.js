@@ -3,13 +3,15 @@ import initialState from './initialState';
 
 
 const CartReducer = (state = initialState, action) => {
-    console.log('state in cartreducer', state)
+    console.log('state in cartreducer', state.cart)
+    let cart = state.cart;
 
     switch (action.type) {
         case ADD_CART_PRODUCT: 
+            cart.push(action.payload)
             return {
                 ...state, 
-                cart: state.cart.push(action.payload),
+                cart: cart,
                 error: ''
             }
         case REMOVE_CART_PRODUCT:
@@ -23,3 +25,5 @@ const CartReducer = (state = initialState, action) => {
 };
 
 export default CartReducer;
+
+// cart: state.cart.push(action.payload),
