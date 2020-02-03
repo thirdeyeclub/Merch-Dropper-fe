@@ -1,15 +1,17 @@
-import React from 'react';
-
-import NavBar from './components/NavBar';
-import Registration from './components/Registration';
-import './App.css';
+import React from "react";
+import ShirtForm from "./components/ShirtForm";
+import NavBar from "./components/NavBar";
+import Registration from "./components/Registration";
+import "./App.css";
 
 function App() {
   return (
-    <div className='App'>
-      <h1>Labs 20 Merch Dropper</h1>
+    <div className="App">
+      {/* <h1>Labs 20 Merch Dropper</h1> */}
       <NavBar />
-      <Registration />
+      {/* <Registration /> */}
+      <ShirtForm />
+      {/* <ShirtGetter /> */}
     </div>
   );
 }
