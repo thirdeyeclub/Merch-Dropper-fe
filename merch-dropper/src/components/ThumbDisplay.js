@@ -1,19 +1,19 @@
 import React from 'react'
 import styled from "styled-components";
+import designUrls from "../utils/designUrls";
 
-
-
+const designs = designUrls;
 
 
 const PicDisplay = styled.div`
   height: 100px;
 `;
 
-const ThumbDisplay = ({logos, garment, setGarment}) => {
+const ThumbDisplay = ({garment, setGarment}) => {
   return (
     <PicDisplay>
-      {logos.map((logo)=> (
-        <img src={logo.thumb} alt={logo.name} onClick={()=>setGarment({...garment, artwork: logo.hiRes})}/>
+      {designs.map((design)=> (
+        <img src={design.thumb} alt={design.name} onClick={()=>setGarment({...garment, artwork: design.hiRes})}/>
       ))}
 
     </PicDisplay>

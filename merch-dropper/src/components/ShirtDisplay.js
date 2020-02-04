@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const ShirtDisplay = ({ garment }, setGarment) => {
+const ShirtDisplay = (garment) => {
   console.log(garment);
 
   let data = {
@@ -36,15 +36,16 @@ const ShirtDisplay = ({ garment }, setGarment) => {
       data,
       config
     );
+    return shirtImage.data.url;
     console.log(shirtImage.data.url);
   }
 
-  makeShirt();
-
+  const mockShirt = makeShirt();
+  console.log(mockShirt)
 
   return (
     <div>
-      <h1>Shirt Here!</h1>
+      <img src={mockShirt} alt="" />
     </div>
   );
 };
