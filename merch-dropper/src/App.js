@@ -2,6 +2,7 @@ import React from "react";
 import ShirtForm from "./components/ShirtForm";
 import NavBar from "./components/NavBar";
 import Registration from "./components/Registration";
+// import ShirtDisplay from "./components/ShirtDisplay";
 import "./App.css";
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
       <NavBar />
       {/* <Registration /> */}
       <ShirtForm />
-      {/* <ShirtGetter /> */}
+      {/* <ShirtDisplay /> */}
     </div>
   );
 }
