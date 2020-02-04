@@ -21,7 +21,7 @@ function App() {
       <NavBar />
       {/* <Registration /> */}
       <ShirtForm />
-      {/* <ShirtGetter /> */}
+      {/* <ShirtDisplay /> */}
     </div>
   );
 }
