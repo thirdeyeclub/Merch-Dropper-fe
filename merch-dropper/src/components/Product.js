@@ -11,7 +11,7 @@ const Product = (props) => {
                 <h3>{props.product.title}</h3>
                 <Img src={props.product.image} />
                 <h3>${props.product.price}</h3>
-                <button onClick={() => props.addToCart(props.product)}>Add to Cart</button>
+                <button className='cart-btn' onClick={() => props.addToCart(props.product)}>Add to Cart</button>
             </Div>
         </div>
     )
