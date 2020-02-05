@@ -1,6 +1,7 @@
 import React,{ useState } from 'react';
 
 import NavBar from './components/NavBar';
+import Registration from './components/Registration';
 import './App.css';
 
 import Homepage from './components/Homepage';
@@ -15,12 +16,10 @@ function App() {
   const [products] = useState(data)
 
   return (
-    <div className="App">
+    <div className='App'>
+      <h1>Labs 20 Merch Dropper</h1>
       <NavBar />
-      <Homepage />
-      // <ShoppingCart />
-      // <Products product={products}/>
-      <Footer />
+      <Registration />
     </div>
   );
 }
