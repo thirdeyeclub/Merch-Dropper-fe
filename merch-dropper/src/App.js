@@ -1,7 +1,6 @@
 import React,{ useState } from 'react';
 
 import NavBar from './components/NavBar';
-import Registration from './components/Registration';
 import './App.css';
 
 import Homepage from './components/Homepage';
@@ -17,13 +16,11 @@ function App() {
 
   return (
     <div className="App">
-      {/* <h1>Labs 20 Merch Dropper</h1> */}
       <NavBar />
-      <Registration />
-      <Shirt />
-
-
-      {/* <ShirtDisplay /> */}
+      <Homepage />
+      // <ShoppingCart />
+      // <Products product={products}/>
+      <Footer />
     </div>
   );
 }
