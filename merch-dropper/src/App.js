@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import './App.css';
 
 import Homepage from './components/Homepage';
+import Footer from './components/Footer';
 
 import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
@@ -18,7 +19,8 @@ function App() {
       <NavBar />
       <Homepage />
       // <ShoppingCart />
-      <Products product={products}/>
+      // <Products product={products}/>
+      <Footer />
     </div>
   );
 }
