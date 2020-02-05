@@ -10,6 +10,7 @@ import NavBar from "./components/NavBar";
 import Registration from "./components/Registration";
 import Shirt from "./components/ShirtComponents/Shirt";
 import ShirtMaker from "./components/ShirtComponents/ShirtMaker";
+import ShirtsCard from "./components/Layout/ShirtCard/ShirtsCard";
 import "./App.css";
 >>>>>>> working on shirt building and display functionality
 
@@ -28,9 +29,9 @@ function App() {
     <div className="App">
       {/* <h1>Labs 20 Merch Dropper</h1> */}
       <NavBar />
-      <Registration />
+      {/* <Registration /> */}
       <Shirt />
-
+      <ShirtsCard />
 
       {/* <ShirtDisplay /> */}
     </div>
