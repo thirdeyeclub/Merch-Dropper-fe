@@ -1,18 +1,8 @@
-<<<<<<< HEAD
 import React,{ useState } from 'react';
 
 import NavBar from './components/NavBar';
 import Registration from './components/Registration';
 import './App.css';
-=======
-import React from "react";
-import NavBar from "./components/NavBar";
-import Registration from "./components/Registration";
-import Shirt from "./components/ShirtComponents/Shirt";
-import ShirtMaker from "./components/ShirtComponents/ShirtMaker";
-import ShirtsCard from "./components/Layout/ShirtCard/ShirtsCard";
-import "./App.css";
->>>>>>> working on shirt building and display functionality
 
 import Homepage from './components/Homepage';
 import Footer from './components/Footer';
