@@ -68,3 +68,27 @@ table {
 .designBtn {
 	box-shadow: 0 10px 10px 0 rgba(167, 167, 167, 0.336), 0 3px 8px 0 rgba(0, 0, 0, 0.19);
 }
+
+.homepage {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.homeSection {
+	text-align: left;
+	padding: 10vh 0 0 0;
+}
+
+.imgPlaceholder {
+	width: 18vw;
+	height: 20vh;
+	background-color: rgb(233, 233, 233);
+	border-radius: 10px;
+}
+
+.imgPlaceholderLrg {
+	width: 35vw;
+	height: 66.5vh;
+	background-color: rgb(233, 233, 233);
+	border-radius: 10px;
+}
