@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const ShirtDisplay = (garment) => {
+const ShirtMaker = async (garment, setGarment) => {
   console.log(garment);
 
-  let data = {
+  let data = await {
     template: { name: "front" },
     product: { id: "canvas-unisex-t-shirt", color: garment.color },
     design: {
@@ -15,7 +15,7 @@ const ShirtDisplay = (garment) => {
           dimensions: { width: garment.designWidth },
           position: {
             horizontal: garment.designPlacement,
-            offset: { top: garment.offsetFromTop }
+            offset: { top: garment.offSetFromTop }
           }
         }
       }
@@ -23,7 +23,9 @@ const ShirtDisplay = (garment) => {
     output: garment.fileOutput
   };
 
-  let config = {
+console.log(data, "DDD AAAA TTTTT  AAAA")
+
+  let config = await {
     headers: {
       "Content-Type": "application/json",
       "Authorization": "Basic OnRlc3RfZUIza2JJTThFRG5OdHEwenBSSU5fZw=="
@@ -31,23 +33,19 @@ const ShirtDisplay = (garment) => {
   };
 
   async function makeShirt() {
-    const shirtImage = await axios.post(
-      "https://cors.x7.workers.dev/https://api.scalablepress.com/v3/mockup",
-      data,
-      config
-    );
-    return shirtImage.data.url;
-    console.log(shirtImage.data.url);
+    try {
+      const shirtImage = await axios.post(
+        "https://cors.x7.workers.dev/https://api.scalablepress.com/v3/mockup",
+        data,
+        config
+      );
+      await setGarment({ ...garment, mockUrl: shirtImage.data.url });
+    } catch (err) {
+      console.log("ERROR:", err);
+    }
   }
-
-  const mockShirt = makeShirt();
-  console.log(mockShirt)
-
-  return (
-    <div>
-      <img src={mockShirt} alt="" />
-    </div>
-  );
+  makeShirt();
+  return <p>{data}</p>
 };
 
-export default ShirtDisplay;
+export default ShirtMaker;

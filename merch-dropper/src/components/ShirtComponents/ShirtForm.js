@@ -1,41 +1,35 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import ColorPicker from "./ColorPicker";
-import ThumbDisplay from "./ThumbDisplay";
-import ShirtDisplay from "./ShirtDisplay";
+import ShirtMaker from "./ShirtMaker";
 
-const ShirtForm = () => {
-  const [garment, setGarment] = useState({
-    color: "",
-    printStyle: "dtg",
-    artwork: "",
-    designWidth: "7",
-    designPlacement: "C",
-    offsetFromTop: "2",
-    fileOutput: { width: 400, height: 800, padding: 20, format: "png" },
-    mockUrl: ""
-  });
-
-  const { designWidth, designPlacement, offsetFromTop, mockUrl } = garment;
-
+const ShirtForm = ({ garment, setGarment }) => {
+  // console.log(garment);
+  const { designWidth, designPlacement, offSetFromTop } = garment;
+  // console.log(setGarment)
   const handleChange = (e) => {
     setGarment({ ...garment, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
-    console.log("e", e);
+    e.preventDefault();
+    ShirtMaker(garment, setGarment);
   };
 
   return (
     <Fragment>
-      <form>
+      <form onSubmit={handleSubmit}>
         <ColorPicker
           garment={garment}
           setGarment={setGarment}
           handleChange={handleChange}
         />
-        <ThumbDisplay garment={garment} setGarment={setGarment} />
         <label htmlFor="designWidth">Design Width</label>
-        <input type="number" name="designWidth" value={designWidth} />
+        <input
+          type="number"
+          name="designWidth"
+          value={designWidth}
+          onChange={handleChange}
+        />
         <label htmlFor="designPlacement">Horizontal Placement</label>
         <select
           name="designPlacement"
@@ -43,15 +37,17 @@ const ShirtForm = () => {
           onChange={handleChange}>
           <option value="L">Left</option>
           <option value="LC">Center-Left</option>
-          <option selected value="C">
-            Center
-          </option>
+          <option value="C">Center</option>
           <option value="RC">Right-Center</option>
           <option value="R">Right</option>
         </select>
         <label htmlFor="offSetFromTop">Inches From Top</label>
-        <input type="number" name="offSetFromTop" value={offsetFromTop} />
-        <ShirtDisplay garment={garment} setGarment={setGarment} />
+        <input
+          type="number"
+          name="offSetFromTop"
+          value={offSetFromTop}
+          onChange={handleChange}
+        />
         <button color="success" type="submit">
           Submit
         </button>

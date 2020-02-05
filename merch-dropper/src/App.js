@@ -6,10 +6,10 @@ import Registration from './components/Registration';
 import './App.css';
 =======
 import React from "react";
-import ShirtForm from "./components/ShirtForm";
 import NavBar from "./components/NavBar";
 import Registration from "./components/Registration";
-// import ShirtDisplay from "./components/ShirtDisplay";
+import Shirt from "./components/ShirtComponents/Shirt";
+import ShirtMaker from "./components/ShirtComponents/ShirtMaker";
 import "./App.css";
 >>>>>>> working on shirt building and display functionality
 
@@ -28,8 +28,10 @@ function App() {
     <div className="App">
       {/* <h1>Labs 20 Merch Dropper</h1> */}
       <NavBar />
-      {/* <Registration /> */}
-      <ShirtForm />
+      <Registration />
+      <Shirt />
+
+
       {/* <ShirtDisplay /> */}
     </div>
   );
