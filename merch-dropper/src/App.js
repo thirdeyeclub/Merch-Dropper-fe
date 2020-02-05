@@ -19,8 +19,10 @@ function App() {
     <div className="App">
       {/* <h1>Labs 20 Merch Dropper</h1> */}
       <NavBar />
-      {/* <Registration /> */}
-      <ShirtForm />
+      <Registration />
+      <Shirt />
+
+
       {/* <ShirtDisplay /> */}
     </div>
   );
