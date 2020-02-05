@@ -108,7 +108,7 @@ const ColorPicker = (props) => {
       <select name="color" value={garment.color} onChange={handleChange}>
         <option value="">Select Color</option>
         {shirtColors.map((color) => (
-          <option value={color}>{color}</option>
+          <option key={color} value={color}>{color}</option>
         ))}
       </select>
     </Fragment>
@@ -116,6 +116,3 @@ const ColorPicker = (props) => {
 };
 export default ColorPicker;
 
-{
-  /* <ColorPicker />; */
-}
