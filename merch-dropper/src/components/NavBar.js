@@ -22,21 +22,24 @@ import {
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
-// useEffect(() => {
-//   if (localStorage.getItem("Id_token")) {
-//     auth0Client.signIn();
-//   }
-// }, [])
-
   const toggle = () => setIsOpen(!isOpen);
 
+  useEffect(() => {
+    console.log(auth0Client.getProfile());
+  }, []);
+
+    async function profileSignIn() {
+      auth0Client.signIn();
+      await auth0Client.getProfile();
+    }
+  
 
   const signOut = () => {
     auth0Client.signOut();
     this.props.history.replace("/");
   };
 
-  if (auth0Client.isAuthenticated()) {
+  if (!localStorage.getItem("Id_token")) {
     return (
       <div className="divNav">
         <Navbar color="white" light expand="md" className="navStyle">
@@ -62,6 +65,9 @@ const NavBar = (props) => {
                 </FormGroup>
               </NavItem>
             </Nav>
+            <Button className="ml-5 mr-5" onClick={profileSignIn}>
+              Sign In
+            </Button>
             <Button color="primary" href="/" className="designBtn">
               Design Merch
             </Button>{" "}
@@ -76,7 +82,6 @@ const NavBar = (props) => {
   else {
     return (
       <div class="divNav">
-        <h1>Nothing here...</h1>
         <Navbar color="white" light expand="md" className="navStyle">
           <img
             className="mr-5"
@@ -106,10 +111,7 @@ const NavBar = (props) => {
             <Button className="ml-5" outline color="primary" href="/">
               Buy Merch
             </Button>{" "}
-            <Button className="ml-5" onClick={auth0Client.signIn}>
-              Sign In
-            </Button>
-            <Button className="ml-5" onClick={auth0Client.signOut}>
+            <Button className="ml-5" onClick={signOut}>
               Sign Out
             </Button>
           </Collapse>

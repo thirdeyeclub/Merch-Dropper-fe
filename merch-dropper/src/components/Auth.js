@@ -27,7 +27,6 @@ class Auth {
     
     getIdToken() {
         return this.idToken;
-        
     }
     
     isAuthenticated() {
@@ -35,11 +34,7 @@ class Auth {
     }
     
     signIn() {
-        // localStorage.setItem("Id_token", this.idToken);
-        // console.log("Profile", this.profile);
-        // console.log("ID Token", this.idToken);
         this.auth0.authorize();
-        // this.getIdToken();
   }
 
   handleAuthentication() {
