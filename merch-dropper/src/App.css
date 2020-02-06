@@ -92,3 +92,15 @@ table {
 	background-color: rgb(233, 233, 233);
 	border-radius: 10px;
 }
+
+/* Merchandise Card Classes */
+
+
+.flex {
+	display:flex;
+	flex-wrap: wrap;
+}
+
+.container-margin {
+	margin: 0 15px;
+}
