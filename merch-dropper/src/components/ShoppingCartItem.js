@@ -6,8 +6,8 @@ const ShoppingCartItem = (props) => {
     return (
         <div>
             <div className='product-container'>
-                <h3>{props.product.title}</h3>
-                <img src={props.product.image} />
+                <h3>{props.product.design}</h3>
+                <img src={props.product.url} />
                 <h3>${props.product.price}</h3>
                 <button onClick={() => props.removeFromCart(props.product)}>Remove Item</button>
             </div>
