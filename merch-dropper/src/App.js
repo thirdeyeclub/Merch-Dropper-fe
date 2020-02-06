@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import Products from "./components/Products";
 import ShoppingCart from "./components/ShoppingCart";
 import data from "./dummyData";
-import MerchGrid from "./components/Layout/MerchGrid";
+import ProductDisplay from "./components/ProductDisplay";
 
 function App() {
   const [products] = useState(data);
@@ -20,7 +20,7 @@ function App() {
       {/* <Homepage /> */}
       {/* // <ShoppingCart /> */}
       {/* // <Products product={products}/> */}
-      <MerchGrid />
+      <ProductDisplay />
       <Footer />
     </div>
   );

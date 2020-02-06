@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import "../../../App.css";
+import "../App.css";
 
 import {
   Card,
@@ -12,14 +12,14 @@ import {
   Col,
   CardDeck
 } from "reactstrap";
-import styled from "styled-components";
 
 
 
 
 
 
-const ShirtCard = (shirt) => {
+
+const ProductCard = (shirt) => {
 
   console.log(shirt)
   return (
@@ -30,10 +30,10 @@ const ShirtCard = (shirt) => {
         <CardBody>
   <CardTitle className="h5 text-center">{shirt.design}</CardTitle>
   <CardText>
-            <small className="text-muted">Shown in {shirt.color}</small>
+            <small className="text-muted">In {shirt.color}</small>
           </CardText>
   <CardText>${shirt.price}</CardText>
-  <button onClick={() => shirt.addToCart(shirt.shirt)}>Add to Cart</button>
+  <Button onClick={() => shirt.addToCart(shirt.shirt)}>Add to Cart</Button>
         </CardBody>
       </Card>
       </Col>
@@ -41,4 +41,4 @@ const ShirtCard = (shirt) => {
   );
 };
 
-export default ShirtCard;
+export default ProductCard;
