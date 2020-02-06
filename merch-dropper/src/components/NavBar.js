@@ -11,6 +11,7 @@ import {
   Input,
   Button
 } from 'reactstrap';
+import { connect } from 'react-redux';
 
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,11 +39,18 @@ const NavBar = (props) => {
 
           </Nav>
             <Button color="primary" href="/" className="designBtn">Design Merch</Button>{' '}
-            <Button className="ml-5" outline color="primary" href="/">Buy Merch</Button>{' '}
+            <Button className="ml-5" outline color="primary" href="/cart">Buy Merch</Button>{' '}
         </Collapse>
       </Navbar>
     </div>
   );
 }
 
-export default NavBar;
+function mapStateToProps(state) {
+  console.log('state in navBar', state.CartReducer.cartQuantity);
+  return {
+    totalCartQuantity: state.CartReducer.cartQuantity
+  }
+}
+
+export default connect(mapStateToProps, null)(NavBar);

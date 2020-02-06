@@ -1,4 +1,5 @@
 import React,{ useState } from 'react';
+import { Route } from 'react-router-dom';
 
 import NavBar from './components/NavBar';
 import './App.css';
@@ -17,8 +18,10 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Homepage />
-      // <ShoppingCart />
+      <Route exact path='/' component={Homepage} />
+      {/* <Route path='/shop' component={Products} /> */}
+      <Route path='/cart' component={ShoppingCart} />
+      {/* // <ShoppingCart /> */}
       // <Products product={products}/>
       <Footer />
     </div>

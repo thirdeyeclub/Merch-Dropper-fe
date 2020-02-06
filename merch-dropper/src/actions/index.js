@@ -110,3 +110,20 @@ export const removeFromCart = product => {
         payload: product.id
     }
 };
+
+export const INCREASE_QTY = 'INCREASE_QTY';
+export const increaseQty = quantity => {
+    console.log('increaseaction called', quantity)
+    return {
+        type: INCREASE_QTY,
+        payload: quantity
+    }
+};
+
+export const DECREASE_QTY = 'DECREASE_QTY';
+export const decreaseQty = quantity => {
+    return {
+        type: DECREASE_QTY,
+        payload: quantity
+    }
+}

@@ -2,16 +2,18 @@ import React from 'react';
 
 
 const ShoppingCartItem = (props) => {
-    console.log('props from cart item', props)
+    console.log('cartItem props', props)
     return (
-        <div>
-            <div className='product-container'>
-                <h3>{props.product.title}</h3>
-                <img src={props.product.image} />
-                <h3>${props.product.price}</h3>
-                <button onClick={() => props.removeFromCart(props.product)}>Remove Item</button>
-            </div>
-            <h1>shopping cart item</h1>
+        <div className='product-container'>
+            <img src={props.product.image} />
+            <ul>
+                <li>{props.product.title}</li>
+                <li>${props.product.price}</li>
+                <li>Quantity: {props.product.cartQuantity}</li>
+            </ul>
+            <button onClick={() => props.increaseQty(props.product.cartQuantity)}>+</button>
+            <button onClick={() => props.decreaseQty(props)}>-</button>
+            <button onClick={() => props.removeFromCart(props.product)}>Remove Item</button>
         </div>
     )
 }
