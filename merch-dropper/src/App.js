@@ -8,19 +8,19 @@ import Footer from "./components/Footer";
 
 import Products from "./components/Products";
 import ShoppingCart from "./components/ShoppingCart";
-import data from "./dummyData";
+import productArray from "./components/ProductDisplay";
 import ProductDisplay from "./components/ProductDisplay";
 
 function App() {
-  const [products] = useState(data);
+  const [products] = useState(productArray);
 
   return (
     <div className="App">
       <NavBar />
       {/* <Homepage /> */}
-      {/* // <ShoppingCart /> */}
+      // <ShoppingCart />
       {/* // <Products product={products}/> */}
-      <ProductDisplay />
+      <ProductDisplay product={products} />
       <Footer />
     </div>
   );

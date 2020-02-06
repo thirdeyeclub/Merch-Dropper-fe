@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
 import ProductCard from "./ProductCard";
+import { connect } from 'react-redux';
+import { addToCart } from '../actions';
 import "../App.css";
 import {
   Card,
@@ -14,7 +16,7 @@ import {
   CardDeck
 } from "reactstrap";
 
-const shirtArray = [
+export const productArray = [
   {
     id: 1,
     color: "Burnt Orange",
@@ -65,18 +67,19 @@ const shirtArray = [
   }
 ];
 
-const ProductDisplay = () => {
+const ProductDisplay = ({product, addToCart}) => {
   return (
     <Container fluid="true" className="container-margin">
       <Row>
         <Col sm="7" className="flex">
-          {shirtArray.map((shirt) => (
+          {productArray.map((product) => (
             <ProductCard
-              url={shirt.url}
-              color={shirt.color}
-              design={shirt.design}
-              price={shirt.price}
-              shirt={shirt}
+              url={product.url}
+              color={product.color}
+              design={product.design}
+              price={product.price}
+              product={product}
+              addToCart={addToCart}
             />
           ))}
         </Col>
@@ -87,4 +90,12 @@ const ProductDisplay = () => {
   );
 };
 
-export default ProductDisplay;
+const mapStateToProps = state => {
+  console.log('state in products', state.CartReducer.cart)
+  return {
+      cart: state.CartReducer.cart
+  }
+}
+
+export default connect(mapStateToProps, { addToCart })(ProductDisplay);
+
