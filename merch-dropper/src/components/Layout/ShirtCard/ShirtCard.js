@@ -29,7 +29,11 @@ const ShirtCard = (shirt) => {
         <CardImg top width="100%" height="auto" src={shirt.url} alt="T-Shirt" />
         <CardBody>
   <CardTitle className="h5 text-center">{shirt.design}</CardTitle>
-          <CardText>$29.99</CardText>
+  <CardText>
+            <small className="text-muted">Shown in {shirt.color}</small>
+          </CardText>
+  <CardText>${shirt.price}</CardText>
+  <button onClick={() => shirt.addToCart(shirt.shirt)}>Add to Cart</button>
         </CardBody>
       </Card>
       </Col>
