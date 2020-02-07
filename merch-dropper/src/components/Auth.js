@@ -2,6 +2,8 @@ import auth0 from "auth0-js";
 
 class Auth {
   constructor() {
+
+    
     this.auth0 = new auth0.WebAuth({
       // the following three lines MUST be updated
       domain: "merch-dropper.auth0.com",
@@ -34,6 +36,7 @@ class Auth {
     }
     
     signIn() {
+        // localStorage.setItem("Id_token", this.idToken);
         this.auth0.authorize();
   }
 

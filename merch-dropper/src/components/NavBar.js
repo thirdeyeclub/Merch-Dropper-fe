@@ -17,10 +17,13 @@ import {
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const [token, setToken] = useState(localStorage.getItem("Id_token"))
+
   const toggle = () => setIsOpen(!isOpen);
 
   useEffect(() => {
     console.log(auth0Client.getProfile());
+    setToken(localStorage.getItem("Id_token"));
   }, [localStorage.getItem("Id_token")]);
 
     async function profileSignIn() {
@@ -33,6 +36,9 @@ const NavBar = (props) => {
     auth0Client.signOut();
     this.props.history.replace("/");
   };
+  
+
+
 
   if (!localStorage.getItem("Id_token") || localStorage.getItem("Id_token") == "undefined") {
     return (
@@ -60,9 +66,13 @@ const NavBar = (props) => {
                 </FormGroup>
               </NavItem>
             </Nav>
-            <Button className="ml-5 mr-5" onClick={profileSignIn}>
+            {!token ||
+              token == "undefined" ? <Button className="ml-5 mr-5" onClick={profileSignIn}>
               Sign In
-            </Button>
+            </Button> : null}
+            {/* <Button className="ml-5 mr-5" onClick={profileSignIn}>
+              Sign In
+            </Button> */}
             <Button color="primary" href="/" className="designBtn">
               Design Merch
             </Button>{" "}
