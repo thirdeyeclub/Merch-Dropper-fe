@@ -1,34 +1,55 @@
-
-export default {
-    cart: [],
-    products: [
-        {
-			id: 1,
-			title: 'The Art Of War',
-			price: 10.11,
-			image:
-				'https://images-na.ssl-images-amazon.com/images/I/41FBMkY3cgL._SX331_BO1,204,203,200_.jpg'
-		},
-		{
-			id: 2,
-			title: 'Civilization and Its Discontents',
-			price: 14.29,
-			image:
-				'https://images-na.ssl-images-amazon.com/images/I/51Jj12iMZnL._SX331_BO1,204,203,200_.jpg'
-		},
-		{
-			id: 3,
-			title: 'Influence: The Psychology of Persuasion',
-			price: 10.98,
-			image:
-				'https://images-na.ssl-images-amazon.com/images/I/512-B-1yXuL._SX331_BO1,204,203,200_.jpg'
-		},
-		{
-			id: 4,
-			title: 'Grokking Algorithms',
-			price: 40.00,
-			image:
-				'https://images-na.ssl-images-amazon.com/images/I/61uUPXbhMxL._SX397_BO1,204,203,200_.jpg'
-		}
-	]
+const initialState = {
+  cart: [],
+  products: [
+    {
+      id: 1,
+      color: "Burnt Orange",
+      design: "Static Ant",
+      url:
+        "https://raw.githubusercontent.com/Jeris-Manning/FILES/master/shirtsSmall/burnt.png",
+      price: 29.99
+    },
+    {
+      id: 2,
+      color: "Blue Steel",
+      design: "Battle Ant",
+      url:
+        "https://raw.githubusercontent.com/Jeris-Manning/FILES/master/shirtsSmall/bluesteel.png",
+      price: 29.99
+    },
+    {
+      id: 3,
+      color: "Gold",
+      design: "Merch Dropper",
+      url:
+        "https://raw.githubusercontent.com/Jeris-Manning/FILES/master/shirtsSmall/gold.png",
+      price: 29.99
+    },
+    {
+      id: 4,
+      color: "Oxblood",
+      design: "Static Ant",
+      url:
+        "https://raw.githubusercontent.com/Jeris-Manning/FILES/master/shirtsSmall/oxblood.png",
+      price: 29.99
+    },
+    {
+      id: 5,
+      color: "Heather Stone",
+      design: "Battle Ant",
+      url:
+        "https://raw.githubusercontent.com/Jeris-Manning/FILES/master/shirtsSmall/heatherStone.jpg",
+      price: 29.99
+    },
+    {
+      id: 6,
+      color: "Black",
+      design: "Merch Dropper",
+      url:
+        "https://raw.githubusercontent.com/Jeris-Manning/FILES/master/shirtsSmall/black.png",
+      price: 29.99
+    }
+  ]
 };
+
+export default initialState;
