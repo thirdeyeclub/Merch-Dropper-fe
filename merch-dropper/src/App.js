@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import { Route } from "react-router-dom";
 import "./App.css";
-import Products from "./components/Products";
 import ShoppingCart from "./components/ShoppingCart";
 import Callback from "./components/Callback";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
-
-import initialState from "./reducers/initialState";
-
 import ProductDisplay from "./components/ProductDisplay";
+import initialState from "./reducers/initialState";
 
 function App() {
   const [products] = useState(initialState.products);
