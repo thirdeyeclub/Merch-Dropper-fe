@@ -1,11 +1,11 @@
 import React from 'react';
 import ShoppingCartItem from './ShoppingCartItem';
 import { connect } from 'react-redux';
-import { removeFromCart } from '../actions'; 
+import { removeFromCart } from '../actions';
 import styled from 'styled-components';
 
 const ShoppingCart = (props) => {
-    console.log('cart props', props)
+    // console.log('cart props', props)
     return (
         <Div>
             {props.cart.cart.map(product => (
@@ -16,7 +16,7 @@ const ShoppingCart = (props) => {
 };
 
 const mapStateToProps = (state, props) => {
-    console.log('state from shoppingcart', state.CartReducer.cart)
+    // console.log('state from shoppingcart', state.CartReducer.cart)
     return {
         cart: state.CartReducer
     }
