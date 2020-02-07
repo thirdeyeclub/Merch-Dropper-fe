@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import auth0Client from "./Auth";
 import '../App.css';
+import "./NavBar.css";
 import {
   Collapse,
   Navbar,
@@ -8,12 +9,6 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
   FormGroup,
   Input,
   Button
@@ -26,7 +21,7 @@ const NavBar = (props) => {
 
   useEffect(() => {
     console.log(auth0Client.getProfile());
-  }, []);
+  }, [localStorage.getItem("Id_token")]);
 
     async function profileSignIn() {
       auth0Client.signIn();
@@ -39,7 +34,7 @@ const NavBar = (props) => {
     this.props.history.replace("/");
   };
 
-  if (!localStorage.getItem("Id_token")) {
+  if (!localStorage.getItem("Id_token") || localStorage.getItem("Id_token") == "undefined") {
     return (
       <div className="divNav">
         <Navbar color="white" light expand="md" className="navStyle">
@@ -111,6 +106,8 @@ const NavBar = (props) => {
             <Button className="ml-5" outline color="primary" href="/">
               Buy Merch
             </Button>{" "}
+            <img src={auth0Client.getProfile().picture} className="img-rounded img-fluid avatar" />
+            <p><b>Hello {auth0Client.getProfile().name}</b></p>
             <Button className="ml-5" onClick={signOut}>
               Sign Out
             </Button>

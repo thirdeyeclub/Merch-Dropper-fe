@@ -58,6 +58,7 @@ class Auth {
     this.idToken = null;
     this.profile = null;
     this.expiresAt = null;
+    localStorage.removeItem("Id_token");
     this.auth0.logout({
       returnTo: "http://localhost:3000",
       clientID: "Pb3Cp5ptYghmNVDjusjPmsHPRkJq6RAP"
