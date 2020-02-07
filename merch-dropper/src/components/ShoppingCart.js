@@ -7,11 +7,11 @@ import styled from 'styled-components';
 const ShoppingCart = (props) => {
     // console.log('cart props', props)
     return (
-        <Div>
+        <div>
             {props.cart.cart.map(product => (
                 <ShoppingCartItem key={product.id} product={product}removeFromCart={props.removeFromCart} />
             ))}
-        </Div>
+        </div>
     )
 };
 
@@ -26,6 +26,4 @@ const mapStateToProps = (state, props) => {
 export default connect(mapStateToProps, { removeFromCart })(ShoppingCart);
 
 
-const Div = styled.div`
-    background: plum;
-`;
+
