@@ -198,10 +198,3 @@ table {
 		0 3px 8px 0 rgba(0, 0, 0, 0.19);
 	border-radius: 5px;
 	}
-
-	.tester {
-		width: 30%;
-		max-height: 50vh;
-		height: auto;
-		/* background-color: red; */
-	}

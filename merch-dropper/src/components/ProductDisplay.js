@@ -32,14 +32,14 @@ const ProductDisplay = ({ products, addToCart }) => {
             />
           ))}
         </Col>
-        <div className="tester">Hello
+        {/* <div className="tester">Hello
         <ProductWindow>
           <img
             className="flex"
             src="https://raw.githubusercontent.com/Jeris-Manning/FILES/master/shirtsSmall/black.png"
             alt=""
           />
-        </ProductWindow></div>
+        </ProductWindow></div> */}
       </Row>
     </Container>
   );
