@@ -62,7 +62,8 @@ class Auth {
     this.expiresAt = null;
     localStorage.removeItem("Id_token");
     this.auth0.logout({
-      returnTo: "http://localhost:3000",
+      // returnTo: "http://localhost:3000",
+      returnTo: "https://flamboyant-minsky-4b61e4.netlify.com",
       clientID: "Pb3Cp5ptYghmNVDjusjPmsHPRkJq6RAP"
     });
   }
