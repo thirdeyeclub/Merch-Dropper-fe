@@ -9,11 +9,15 @@ import Callback from './components/Callback';
 import Home from './components/Home';
 import Homepage from "./components/Homepage";
 import Footer from "./components/Footer";
-import productArray from "./components/ProductDisplay";
+
+
+import ShoppingCart from "./components/ShoppingCart";
+import initialState from "./reducers/initialState";
+
 import ProductDisplay from "./components/ProductDisplay";
 
 function App() {
-  const [products] = useState(productArray);
+  const [products] = useState(initialState.products);
 
   return (
     <div className="App">
@@ -22,8 +26,9 @@ function App() {
       {/* <NavBar /> */}
       {/* <Homepage /> */}
       <ShoppingCart />
-      {/* // <Products product={products}/> */}
-      <ProductDisplay product={products} />
+
+      <ProductDisplay products={products} />
+
       <Footer />
     </div>
   );
