@@ -6,7 +6,9 @@ import Callback from "./components/Callback";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import ProductDisplay from "./components/ProductDisplay";
+
 import initialState from "./reducers/initialState";
+
 
 function App() {
   const [products] = useState(initialState.products);
@@ -16,6 +18,7 @@ function App() {
       <Route exact path="/callback" component={Callback} exact />
       <ShoppingCart />
       <ProductDisplay products={products} />
+
       <Footer />
     </div>
   );
