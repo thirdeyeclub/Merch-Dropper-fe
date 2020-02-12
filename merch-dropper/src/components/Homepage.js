@@ -17,70 +17,8 @@ import {
 
   const Homepage = () => {
       return (
-        <div className="homepage">
-            {/* <Col sm={{ size: 4, order: 1, offset: 0 }} className="mt-5  homeSection">
-                <h1>Merch</h1>
-                <p>Lorem ipsum Merch Dropper...</p>
-                <h5>Full service custom merchandising</h5>
-                <Button color="primary" href="/" className="designBtn">Let's go!</Button>{' '}
-            </Col>
-            <Col sm={{ size: 'auto', order: 2, offset: 0 }} className="mt-5">
-                <div className="imgPlaceholder"></div>
-                <div className="imgPlaceholder mt-4 mb-4"></div>
-                <div className="imgPlaceholder"></div>
-            </Col>
-            <Col sm={{size: 'auto', order: 3, offset: 0 }} className="mt-5">
-                <div className="imgPlaceholderLrg"></div>
-            </Col>
-            <Col sm={{size: 'auto', order: 4}}>
-                <Row>
-                    <Col sm={{size: 3}}>
-                        <Card className="mt-5">
-                            <CardImg top width="100%" src="https://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder.png" alt="Card image alt" />
-                            <CardBody>
-                            <CardTitle>Card title</CardTitle>
-                            <CardSubtitle>Card subtitle</CardSubtitle>
-                            <CardText>Some quick example text to build on the card title.</CardText>
-                            <Button>Button</Button>
-                            </CardBody>
-                        </Card>
-                    </Col>
-                    <Col sm={{size: 3}}>
-                        <Card className="mt-5">
-                            <CardImg top width="100%" src="https://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder.png" alt="Card image alt" />
-                            <CardBody>
-                            <CardTitle>Card title</CardTitle>
-                            <CardSubtitle>Card subtitle</CardSubtitle>
-                            <CardText>Some quick example text to build on the card title.</CardText>
-                            <Button>Button</Button>
-                            </CardBody>
-                        </Card>
-                    </Col>
-                    <Col sm={{size: 3}}>
-                        <Card className="mt-5">
-                            <CardImg top width="100%" src="https://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder.png" alt="Card image alt" />
-                            <CardBody>
-                            <CardTitle>Card title</CardTitle>
-                            <CardSubtitle>Card subtitle</CardSubtitle>
-                            <CardText>Some quick example text to build on the card title.</CardText>
-                            <Button>Button</Button>
-                            </CardBody>
-                        </Card>
-                    </Col>
-                    <Col sm={{size: 3}}>
-                        <Card className="mt-5">
-                            <CardImg top width="100%" src="https://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder.png" alt="Card image alt" />
-                            <CardBody>
-                            <CardTitle>Card title</CardTitle>
-                            <CardSubtitle>Card subtitle</CardSubtitle>
-                            <CardText>Some quick example text to build on the card title.</CardText>
-                            <Button>Button</Button>
-                            </CardBody>
-                        </Card>
-                    </Col>
-                </Row>
-            </Col> */}
-
+        <div className="homepage" style={{backgroundColor: '#F3F3F3'}}>
+            {/* Begin hero image */}
             <Jumbotron style={{ backgroundImage: `url('https://i.ibb.co/SKTW5GZ/Adobe-Stock-316954524-Preview1-1.png')`, backgroundSize: 'cover', width: '100vw' }}>
                 <Container>
                     <Row>
@@ -106,12 +44,34 @@ import {
                     </Row>
                 </Container>
             </Jumbotron>
-            <Container>
-                <Row>
-                    
-                </Row>
-            </Container>
-
+            {/* End hero image */}
+            {/* Begin featured shops section */}
+            <div style={{width: '100vw'}} className="featuredDiv">
+                <Container style={{padding: '0 5%', borderTop: '2px solid #026FC2', borderLeft: '2px solid #026FC2', borderTopLeftRadius: '10px'}}>
+                    <Row>
+                        <h1 className="mb-4" style={{color: '#026FC2', backgroundColor: '#F3F3F3', fontSize:'2rem', marginTop: '-2%', width: '25%', textAlign: 'center'}}>
+                            Featured Shops
+                            </h1>
+                    </Row>
+                    <Row style={{width: '100%'}}>
+                        <Media object src="https://i.ibb.co/HTvq2CY/image-6.png" style={{width: '30%', height: '10%'}} />
+                        <Media object src="https://i.ibb.co/XzjYthv/image-7.png" style={{width: '30%', height: '10%' ,margin: '0 5%'}} />
+                        <Media object src="https://i.ibb.co/vzsn9kf/image-9.png" style={{width: '30%', height: '10%'}} />
+                    </Row>
+                </Container>
+                <div>
+                    <Row>
+                        <Card style={{width: '25vw'}}>
+                            <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
+                            <CardBody>
+                                <CardTitle>Adorable Kitten Mug</CardTitle>
+                                <CardText>Like cats? We make merch your way.</CardText>
+                            </CardBody>
+                        </Card>
+                    </Row>
+                </div>
+            </div>
+            {/* End featured shops section */}
         </div>
       )
   }

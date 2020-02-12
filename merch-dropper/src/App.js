@@ -22,8 +22,8 @@ function App() {
       <NavBar />
       {/* <ProductDisplay products={products} /> */}
       <Homepage />
-      <ImageUpload />
-      <Footer />
+      {/* <ImageUpload /> */}
+      {/* <Footer /> */}
     </div>
   );
 }
