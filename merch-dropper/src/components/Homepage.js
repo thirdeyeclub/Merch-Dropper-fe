@@ -60,14 +60,40 @@ import {
                     </Row>
                 </Container>
                 <div>
-                    <Row>
-                        <Card style={{width: '25vw'}}>
-                            <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
+                    <Row style={{width: '100vw', display: 'flex', justifyContent: 'space-evenly'}} className="mt-5">
+
+                        <Card style={{width: '18vw', height: '60vh'}}>
+                            <CardImg top width="100%" src="https://i.ibb.co/zhpXpNy/Bg.png" alt="Card image cap" style={{height: '70%'}} />
                             <CardBody>
-                                <CardTitle>Adorable Kitten Mug</CardTitle>
+                                <CardTitle style={{color: '#026FC2' }}>Adorable Kitten Mug</CardTitle>
                                 <CardText>Like cats? We make merch your way.</CardText>
                             </CardBody>
                         </Card>
+
+                        <Card style={{width: '18vw', height: '60vh'}}>
+                            <CardImg top width="100%" src="https://i.ibb.co/jH9JXZy/Image-2.png" alt="Card image cap" style={{height: '70%'}} />
+                            <CardBody>
+                                <CardTitle style={{color: '#026FC2' }}>iPhone 11 Case</CardTitle>
+                                <CardText>Like cats? We make merch your way.</CardText>
+                            </CardBody>
+                        </Card>
+
+                        <Card style={{width: '18vw', height: '60vh'}}>
+                            <CardImg top width="100%" src="https://i.ibb.co/6bnHXp2/Bg-1.png" alt="Card image cap" style={{height: '70%'}}/>
+                            <CardBody>
+                                <CardTitle style={{color: '#026FC2' }}>Adorable Jumper</CardTitle>
+                                <CardText>Like cats? We make merch your way.</CardText>
+                            </CardBody>
+                        </Card>
+
+                        <Card style={{width: '18vw', height: '60vh'}}>
+                            <CardImg top width="100%" src="https://i.ibb.co/N1TNcJg/Screen-Shot-2020-02-05-at-11-15-1.png" alt="Card image cap" style={{height: '70%'}}/>
+                            <CardBody>
+                                <CardTitle style={{color: '#026FC2' }}>Fitted Tee</CardTitle>
+                                <CardText>Like cats? We make merch your way.</CardText>
+                            </CardBody>
+                        </Card>
+
                     </Row>
                 </div>
             </div>
