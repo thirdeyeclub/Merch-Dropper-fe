@@ -10,6 +10,7 @@ import ProductDisplay from "./components/ProductDisplay";
 
 import initialState from "./reducers/initialState";
 import ImageUpload from "./components/CloudinaryWidget";
+import Homepage from "./components/Homepage";
 
 function App() {
   const [products] = useState(initialState.products);
@@ -19,7 +20,8 @@ function App() {
       <Route exact path="/callback" component={Callback} exact />
       <Route path="/cart" component={ShoppingCart} />
       <NavBar />
-      <ProductDisplay products={products} />
+      {/* <ProductDisplay products={products} /> */}
+      <Homepage />
       <ImageUpload />
       <Footer />
     </div>
