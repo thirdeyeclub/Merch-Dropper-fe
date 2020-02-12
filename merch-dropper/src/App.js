@@ -23,7 +23,7 @@ function App() {
       {/* <ProductDisplay products={products} /> */}
       <Homepage />
       {/* <ImageUpload /> */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

@@ -32,9 +32,9 @@ import {
                                 Full service merchandising solutions from Merch Dropper and Scalable Press, no matter the size.
                             </p>
                             <p style={{textAlign: 'center'}}>
-                                <Button color="primary">Let's Go!</Button>
+                                <Button color="primary" style={{width: '10vw'}}>Let's Go!</Button>
                                 <br />
-                                <Button outline color="light" style={{margin: '5% 0'}}>Learn More</Button>
+                                <Button outline color="light" style={{width: '10vw', margin: '5% 0'}}>Learn More</Button>
                             </p>
                         </Col>
                         <Col sm={{ size: 'auto'}} style={{width: '25vw', height: '60vh', margin: '0 5vw'}}>
