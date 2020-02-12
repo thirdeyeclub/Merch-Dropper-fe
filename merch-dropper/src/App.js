@@ -8,6 +8,7 @@ import HomePage from "./components/Home";
 import Footer from "./components/Footer";
 import ProductDisplay from "./components/ProductDisplay";
 import initialState from "./reducers/initialState";
+import ImageUpload from "./components/CloudinaryWidget";
 
 function App() {
   const [products] = useState(initialState.products);
@@ -18,6 +19,7 @@ function App() {
       <Route path='/cart' component={ShoppingCart} />
       <NavBar />
       <ProductDisplay products={products} />
+      <ImageUpload />
       <Footer />
     </div>
   );
