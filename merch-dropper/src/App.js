@@ -7,6 +7,7 @@ import Callback from "./components/Callback";
 import HomePage from "./components/Home";
 import Footer from "./components/Footer";
 import ProductDisplay from "./components/ProductDisplay";
+
 import initialState from "./reducers/initialState";
 import ImageUpload from "./components/CloudinaryWidget";
 
@@ -16,7 +17,7 @@ function App() {
     <div className="App">
       <Route exact path="/" component={HomePage} exact />
       <Route exact path="/callback" component={Callback} exact />
-      <Route path='/cart' component={ShoppingCart} />
+      <Route path="/cart" component={ShoppingCart} />
       <NavBar />
       <ProductDisplay products={products} />
       <ImageUpload />
