@@ -19,7 +19,7 @@ import {
       return (
         <div className="homepage" style={{backgroundColor: '#F3F3F3'}}>
             {/* Begin hero image */}
-            <Jumbotron style={{ backgroundImage: `url('https://i.ibb.co/SKTW5GZ/Adobe-Stock-316954524-Preview1-1.png')`, backgroundSize: 'cover', width: '100vw' }}>
+            <Jumbotron style={{ backgroundImage: `url('https://i.ibb.co/SKTW5GZ/Adobe-Stock-316954524-Preview1-1.png')`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', width: '100vw', height: '100vh' }}>
                 <Container>
                     <Row>
                         <Col sm={{ size: 'auto'}} style={{width: '25vw', height: '60vh'}}>
